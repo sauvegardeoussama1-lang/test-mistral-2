@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - Nexus Games</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/premium.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-premium">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                            <span class="logo-text">Nexus<span class="highlight">Games</span></span>
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                            <li><a href="shop.html" class="active"><i class="fas fa-store"></i> Boutique</a></li>
+                            <li><a href="#categories"><i class="fas fa-list"></i> Catégories</a></li>
+                            <li><a href="#new-releases"><i class="fas fa-fire"></i> Nouveautés</a></li>
+                            <li><a href="#top-sales"><i class="fas fa-trophy"></i> Top Ventes</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Rechercher un jeu..." id="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="user-actions">
+                            <a href="#" class="user-link"><i class="fas fa-user"></i></a>
+                            <a href="#" class="user-link"><i class="fas fa-heart"></i><span class="badge">3</span></a>
+                            <a href="cart.html" class="cart-link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count" id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+            <span><i class="fas fa-chevron-right"></i></span>
+            <span>Boutique</span>
+        </div>
+    </div>
+
+    <!-- Shop Page -->
+    <main class="shop-page">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Sidebar Filters -->
+                <aside class="shop-sidebar">
+                    <div class="filter-section">
+                        <h3><i class="fas fa-filter"></i> Filtres</h3>
+                        
+                        <!-- Category Filter -->
+                        <div class="filter-group">
+                            <h4>Catégories</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <input type="checkbox" id="category-all" checked>
+                                    <label for="category-all">Toutes les catégories</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="category-action">
+                                    <label for="category-action">Action <span class="count">125</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="category-rpg">
+                                    <label for="category-rpg">RPG <span class="count">89</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="category-fps">
+                                    <label for="category-fps">FPS <span class="count">72</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="category-adventure">
+                                    <label for="category-adventure">Aventure <span class="count">112</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="category-sports">
+                                    <label for="category-sports">Sports <span class="count">56</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="category-racing">
+                                    <label for="category-racing">Course <span class="count">42</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="category-horror">
+                                    <label for="category-horror">Horreur <span class="count">38</span></label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Platform Filter -->
+                        <div class="filter-group">
+                            <h4>Plateformes</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <input type="checkbox" id="platform-all" checked>
+                                    <label for="platform-all">Toutes les plateformes</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="platform-pc">
+                                    <label for="platform-pc">PC <span class="count">245</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="platform-ps5">
+                                    <label for="platform-ps5">PS5 <span class="count">189</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="platform-xbox">
+                                    <label for="platform-xbox">Xbox Series X/S <span class="count">167</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="platform-nintendo">
+                                    <label for="platform-nintendo">Nintendo Switch <span class="count">134</span></label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div class="filter-group">
+                            <h4>Prix</h4>
+                            <div class="price-filter">
+                                <input type="range" min="0" max="200" value="200" id="price-range">
+                                <div class="price-range-values">
+                                    <span id="price-min">0 €</span>
+                                    <span id="price-max">200 €</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rating Filter -->
+                        <div class="filter-group">
+                            <h4>Note</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <input type="checkbox" id="rating-all" checked>
+                                    <label for="rating-all">Toutes les notes</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="rating-5">
+                                    <label for="rating-5">
+                                        <div class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="rating-4">
+                                    <label for="rating-4">
+                                        <div class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="count">+100</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="rating-3">
+                                    <label for="rating-3">
+                                        <div class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="count">56</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- On Sale Filter -->
+                        <div class="filter-group">
+                            <h4>Promotions</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <input type="radio" name="sale" id="sale-all" checked>
+                                    <label for="sale-all">Tous</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="sale" id="sale-only">
+                                    <label for="sale-only">Uniquement les soldes</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Apply Filters Button -->
+                        <button class="btn btn-primary btn-block" id="apply-filters">
+                            <i class="fas fa-check"></i> Appliquer les filtres
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="shop-main">
+                    <!-- Sort Options -->
+                    <div class="shop-sort">
+                        <div class="sort-left">
+                            <span class="products-count" id="products-count">Affichage de 1-12 sur 245 jeux</span>
+                        </div>
+                        <div class="sort-right">
+                            <span>Trier par:</span>
+                            <select id="sort-by">
+                                <option value="featured">En vedette</option>
+                                <option value="newest">Nouveautés</option>
+                                <option value="price-asc">Prix: Croissant</option>
+                                <option value="price-desc">Prix: Décroissant</option>
+                                <option value="rating">Meilleure note</option>
+                                <option value="sales">Top Ventes</option>
+                            </select>
+                            <div class="view-toggle">
+                                <button class="view-btn grid-view active" id="grid-view"><i class="fas fa-th"></i></button>
+                                <button class="view-btn list-view" id="list-view"><i class="fas fa-list"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Container -->
+                    <div class="products-container" id="products-container">
+                        <!-- Products will be loaded dynamically -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination">
+                        <button class="page-btn" id="prev-page"><i class="fas fa-chevron-left"></i></button>
+                        <div class="page-numbers" id="page-numbers"></div>
+                        <button class="page-btn" id="next-page"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>Nexus Games</h3>
+                        <p>Votre boutique premium de jeux vidéo depuis 2010.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Liens Rapides</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="shop.html">Boutique</a></li>
+                            <li><a href="#">Mon Compte</a></li>
+                            <li><a href="cart.html">Panier</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Catégories</h3>
+                        <ul>
+                            <li><a href="shop.html?category=action">Action</a></li>
+                            <li><a href="shop.html?category=rpg">RPG</a></li>
+                            <li><a href="shop.html?category=fps">FPS</a></li>
+                            <li><a href="shop.html?category=adventure">Aventure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="#">Livraison et Retour</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Nexus Games. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

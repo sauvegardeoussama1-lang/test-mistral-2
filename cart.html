@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Nexus Games</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/premium.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-premium">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                            <span class="logo-text">Nexus<span class="highlight">Games</span></span>
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                            <li><a href="shop.html"><i class="fas fa-store"></i> Boutique</a></li>
+                            <li><a href="#categories"><i class="fas fa-list"></i> Catégories</a></li>
+                            <li><a href="#new-releases"><i class="fas fa-fire"></i> Nouveautés</a></li>
+                            <li><a href="#top-sales"><i class="fas fa-trophy"></i> Top Ventes</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Rechercher un jeu..." id="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="user-actions">
+                            <a href="#" class="user-link"><i class="fas fa-user"></i></a>
+                            <a href="#" class="user-link"><i class="fas fa-heart"></i><span class="badge">3</span></a>
+                            <a href="cart.html" class="cart-link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count" id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+            <span><i class="fas fa-chevron-right"></i></span>
+            <span>Panier</span>
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <main class="cart-page">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <h2 class="cart-title">
+                        <i class="fas fa-shopping-cart"></i> Mon Panier
+                    </h2>
+                    
+                    <div class="cart-table">
+                        <div class="cart-header">
+                            <div class="cart-col product">Produit</div>
+                            <div class="cart-col price">Prix</div>
+                            <div class="cart-col quantity">Quantité</div>
+                            <div class="cart-col total">Total</div>
+                            <div class="cart-col actions"></div>
+                        </div>
+                        <div class="cart-body" id="cart-body">
+                            <!-- Cart items will be loaded dynamically -->
+                            <div class="empty-cart" id="empty-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h3>Votre panier est vide</h3>
+                                <p>Ajoutez des jeux à votre panier pour commencer vos achats.</p>
+                                <a href="shop.html" class="btn btn-primary">
+                                    <i class="fas fa-store"></i> Continuer vos achats
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Actions -->
+                    <div class="cart-actions-bottom">
+                        <button class="btn btn-outline" id="clear-cart">
+                            <i class="fas fa-trash"></i> Vider le panier
+                        </button>
+                        <button class="btn btn-outline" id="save-cart">
+                            <i class="fas fa-save"></i> Sauvegarder le panier
+                        </button>
+                        <a href="shop.html" class="btn btn-outline">
+                            <i class="fas fa-arrow-left"></i> Continuer vos achats
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2 class="summary-title">
+                        <i class="fas fa-calculator"></i> Résumé de la commande
+                    </h2>
+                    
+                    <div class="summary-content">
+                        <div class="summary-row">
+                            <span>Sous-total</span>
+                            <span id="subtotal">0,00 €</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Livraison</span>
+                            <span id="shipping">Gratuit</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Remise</span>
+                            <span id="discount">0,00 €</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total TTC</span>
+                            <span id="total">0,00 €</span>
+                        </div>
+                    </div>
+
+                    <!-- Promo Code -->
+                    <div class="promo-code">
+                        <h3>Code promo</h3>
+                        <div class="promo-input">
+                            <input type="text" placeholder="Entrez votre code" id="promo-input">
+                            <button class="btn btn-outline" id="apply-promo">
+                                <i class="fas fa-check"></i> Appliquer
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Checkout Button -->
+                    <button class="btn btn-primary btn-block btn-lg" id="checkout-btn">
+                        <i class="fas fa-credit-card"></i> Passer à la caisse
+                    </button>
+
+                    <!-- Payment Info -->
+                    <div class="payment-info">
+                        <p><i class="fas fa-lock"></i> Paiement sécurisé par:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-stripe"></i>
+                        </div>
+                    </div>
+
+                    <!-- Guarantees -->
+                    <div class="cart-guarantees">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Paiement sécurisé</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Livraison rapide</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>Retour sous 30 jours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cross-sell Products -->
+            <section class="cross-sell">
+                <h2 class="section-title">
+                    <i class="fas fa-lightbulb"></i> Vous pourriez aussi aimer
+                </h2>
+                <div class="cross-sell-grid" id="cross-sell-products">
+                    <!-- Cross-sell products will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>Nexus Games</h3>
+                        <p>Votre boutique premium de jeux vidéo depuis 2010.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Liens Rapides</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="shop.html">Boutique</a></li>
+                            <li><a href="#">Mon Compte</a></li>
+                            <li><a href="cart.html">Panier</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Catégories</h3>
+                        <ul>
+                            <li><a href="shop.html?category=action">Action</a></li>
+                            <li><a href="shop.html?category=rpg">RPG</a></li>
+                            <li><a href="shop.html?category=fps">FPS</a></li>
+                            <li><a href="shop.html?category=adventure">Aventure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="#">Livraison et Retour</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Nexus Games. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

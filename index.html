@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Games - Boutique Premium de Jeux Vidéo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/premium.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Premium -->
+    <header class="header-premium">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                            <span class="logo-text">Nexus<span class="highlight">Games</span></span>
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+                            <li><a href="shop.html"><i class="fas fa-store"></i> Boutique</a></li>
+                            <li><a href="#categories"><i class="fas fa-list"></i> Catégories</a></li>
+                            <li><a href="#new-releases"><i class="fas fa-fire"></i> Nouveautés</a></li>
+                            <li><a href="#top-sales"><i class="fas fa-trophy"></i> Top Ventes</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Rechercher un jeu..." id="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="user-actions">
+                            <a href="#" class="user-link"><i class="fas fa-user"></i></a>
+                            <a href="#" class="user-link"><i class="fas fa-heart"></i><span class="badge">3</span></a>
+                            <a href="cart.html" class="cart-link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count" id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="hero-content">
+                        <span class="hero-tag">Nouveauté 2024</span>
+                        <h1>Cyberpunk 2077: Phantom Liberty</h1>
+                        <p>Plongez dans Night City comme jamais auparavant avec cette extension révolutionnaire</p>
+                        <div class="hero-buttons">
+                            <a href="product.html?id=1" class="btn btn-primary">
+                                <i class="fas fa-shopping-cart"></i> Acheter Maintenant
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-play-circle"></i> Voir la bande-annonce
+                            </a>
+                        </div>
+                        <div class="hero-price">
+                            <span class="current-price">59,99 €</span>
+                            <span class="old-price">79,99 €</span>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Cyberpunk+2077" alt="Cyberpunk 2077">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-nav">
+                <button class="hero-nav-btn active"></button>
+                <button class="hero-nav-btn"></button>
+                <button class="hero-nav-btn"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Featured Categories -->
+            <section class="featured-categories">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i> Catégories Populaires
+                </h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon action">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Action</h3>
+                        <p>125 Jeux</p>
+                        <a href="shop.html?category=action" class="btn btn-sm">Voir plus</a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon rpg">
+                            <i class="fas fa-sword"></i>
+                        </div>
+                        <h3>RPG</h3>
+                        <p>89 Jeux</p>
+                        <a href="shop.html?category=rpg" class="btn btn-sm">Voir plus</a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon fps">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3>FPS</h3>
+                        <p>72 Jeux</p>
+                        <a href="shop.html?category=fps" class="btn btn-sm">Voir plus</a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon adventure">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h3>Aventure</h3>
+                        <p>112 Jeux</p>
+                        <a href="shop.html?category=adventure" class="btn btn-sm">Voir plus</a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon sports">
+                            <i class="fas fa-football-ball"></i>
+                        </div>
+                        <h3>Sports</h3>
+                        <p>56 Jeux</p>
+                        <a href="shop.html?category=sports" class="btn btn-sm">Voir plus</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Games -->
+            <section class="featured-games">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-star"></i> Jeux en Vedette
+                    </h2>
+                    <div class="section-actions">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="new">Nouveaux</button>
+                        <button class="filter-btn" data-filter="sale">Promos</button>
+                        <button class="filter-btn" data-filter="top">Top Ventes</button>
+                    </div>
+                </div>
+                <div class="games-grid" id="featured-games">
+                    <!-- Games will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- New Releases -->
+            <section class="new-releases" id="new-releases">
+                <h2 class="section-title">
+                    <i class="fas fa-fire"></i> Nouveautés
+                </h2>
+                <div class="games-carousel" id="new-releases-carousel">
+                    <!-- New releases will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Top Sellers -->
+            <section class="top-sellers" id="top-sales">
+                <h2 class="section-title">
+                    <i class="fas fa-trophy"></i> Top Ventes
+                </h2>
+                <div class="top-sellers-grid" id="top-sellers-grid">
+                    <!-- Top sellers will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Promotional Banner -->
+            <section class="promo-banner">
+                <div class="promo-content">
+                    <div class="promo-text">
+                        <h3>Soldes d'Été</h3>
+                        <p>Jusqu'à -70% sur une sélection de jeux</p>
+                        <div class="promo-timer">
+                            <div class="timer-item">
+                                <span class="timer-value" id="days">02</span>
+                                <span class="timer-label">Jours</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-value" id="hours">14</span>
+                                <span class="timer-label">Heures</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-value" id="minutes">35</span>
+                                <span class="timer-label">Minutes</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-value" id="seconds">22</span>
+                                <span class="timer-label">Secondes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="shop.html?sale=true" class="btn btn-primary btn-lg">
+                        Profiter des Soldes
+                    </a>
+                </div>
+            </section>
+
+            <!-- Newsletter -->
+            <section class="newsletter">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i> Newsletter
+                </h2>
+                <p>Inscrivez-vous pour recevoir les dernières offres et nouveautés</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> S'inscrire
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>Nexus Games</h3>
+                        <p>Votre boutique premium de jeux vidéo depuis 2010. Nous offrons les meilleurs prix et un service client exceptionnel.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Liens Rapides</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="shop.html">Boutique</a></li>
+                            <li><a href="#">Mon Compte</a></li>
+                            <li><a href="cart.html">Panier</a></li>
+                            <li><a href="#">Historique des Commandes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Catégories</h3>
+                        <ul>
+                            <li><a href="shop.html?category=action">Action</a></li>
+                            <li><a href="shop.html?category=rpg">RPG</a></li>
+                            <li><a href="shop.html?category=fps">FPS</a></li>
+                            <li><a href="shop.html?category=adventure">Aventure</a></li>
+                            <li><a href="shop.html?category=sports">Sports</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="#">Livraison et Retour</a></li>
+                            <li><a href="#">Politique de Confidentialité</a></li>
+                            <li><a href="#">Conditions Générales</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Nexus Games. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-stripe"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

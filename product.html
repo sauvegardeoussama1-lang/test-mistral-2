@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit - Nexus Games</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/premium.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-premium">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                            <span class="logo-text">Nexus<span class="highlight">Games</span></span>
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                            <li><a href="shop.html"><i class="fas fa-store"></i> Boutique</a></li>
+                            <li><a href="#categories"><i class="fas fa-list"></i> Catégories</a></li>
+                            <li><a href="#new-releases"><i class="fas fa-fire"></i> Nouveautés</a></li>
+                            <li><a href="#top-sales"><i class="fas fa-trophy"></i> Top Ventes</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Rechercher un jeu..." id="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="user-actions">
+                            <a href="#" class="user-link"><i class="fas fa-user"></i></a>
+                            <a href="#" class="user-link"><i class="fas fa-heart"></i><span class="badge">3</span></a>
+                            <a href="cart.html" class="cart-link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count" id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+            <span><i class="fas fa-chevron-right"></i></span>
+            <a href="shop.html">Boutique</a>
+            <span><i class="fas fa-chevron-right"></i></span>
+            <span id="product-category">Catégorie</span>
+        </div>
+    </div>
+
+    <!-- Product Page -->
+    <main class="product-page">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="https://via.placeholder.com/500x500/1a1a2e/ffffff?text=Game+Cover" alt="Product Image" id="main-product-image">
+                        <div class="image-actions">
+                            <button class="image-action" id="zoom-image"><i class="fas fa-search-plus"></i></button>
+                            <button class="image-action" id="share-image"><i class="fas fa-share-alt"></i></button>
+                            <button class="image-action" id="favorite-image"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail-item active">
+                            <img src="https://via.placeholder.com/100x100/1a1a2e/ffffff?text=1" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="https://via.placeholder.com/100x100/1a1a2e/ffffff?text=2" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="https://via.placeholder.com/100x100/1a1a2e/ffffff?text=3" alt="Thumbnail 3">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="https://via.placeholder.com/100x100/1a1a2e/ffffff?text=4" alt="Thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-header">
+                        <div class="product-badges">
+                            <span class="badge sale" id="product-badge-sale">-20%</span>
+                            <span class="badge new" id="product-badge-new">Nouveau</span>
+                        </div>
+                        <h1 class="product-title" id="product-title">Nom du Jeu</h1>
+                        <div class="product-rating">
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(4.7/5 - 128 avis)</span>
+                        </div>
+                    </div>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Catégorie:</span>
+                            <span class="meta-value" id="product-category-display">Action, Aventure</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Développeur:</span>
+                            <span class="meta-value" id="product-developer">Studio</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Éditeur:</span>
+                            <span class="meta-value" id="product-publisher">Éditeur</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Date de sortie:</span>
+                            <span class="meta-value" id="product-release-date">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p id="product-description-text">
+                            Description détaillée du jeu. Plongez dans un monde captivant avec des graphismes époustouflants 
+                            et une histoire immersive. Découvrez des fonctionnalités uniques et une jouabilité innovante.
+                        </p>
+                    </div>
+
+                    <div class="product-features">
+                        <h3>Caractéristiques</h3>
+                        <ul id="product-features-list">
+                            <li><i class="fas fa-check-circle"></i> Monde ouvert expansif</li>
+                            <li><i class="fas fa-check-circle"></i> Graphismes 4K Ultra HD</li>
+                            <li><i class="fas fa-check-circle"></i> Multijoueur en ligne</li>
+                            <li><i class="fas fa-check-circle"></i> Contenu téléchargeable inclus</li>
+                            <li><i class="fas fa-check-circle"></i> Support des manettes</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-pricing">
+                        <div class="price-display">
+                            <span class="current-price" id="product-current-price">59,99 €</span>
+                            <span class="old-price" id="product-old-price">79,99 €</span>
+                        </div>
+                        <div class="price-info">
+                            <span class="price-label">Prix TTC</span>
+                            <span class="price-savings">Économisez: <span id="product-savings">20,00 €</span></span>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus" id="decrease-qty"><i class="fas fa-minus"></i></button>
+                            <input type="number" min="1" value="1" id="product-quantity">
+                            <button class="qty-btn plus" id="increase-qty"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="btn btn-primary btn-lg" id="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter au panier
+                        </button>
+                        <button class="btn btn-outline btn-lg" id="buy-now">
+                            <i class="fas fa-credit-card"></i> Acheter maintenant
+                        </button>
+                        <button class="btn btn-wishlist" id="add-to-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="product-guarantees">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Livraison gratuite</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>Retour sous 30 jours</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-headset"></i>
+                            <span>Support 24/7</span>
+                        </div>
+                    </div>
+
+                    <div class="product-share">
+                        <span>Partager:</span>
+                        <div class="social-share">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-reddit"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="details">Détails</button>
+                    <button class="tab-btn" data-tab="system">Configuration requise</button>
+                    <button class="tab-btn" data-tab="reviews">Avis <span class="badge">128</span></button>
+                    <button class="tab-btn" data-tab="media">Médias <span class="badge">12</span></button>
+                </div>
+                <div class="tabs-content">
+                    <!-- Details Tab -->
+                    <div class="tab-panel active" id="details-tab">
+                        <div class="tab-section">
+                            <h3>Histoire</h3>
+                            <p id="product-story">
+                                Plongez dans une aventure épique où vos choix façonnent le destin du monde. 
+                                Rencontrez des personnages mémorables et explorez des environnements à couper le souffle.
+                            </p>
+                        </div>
+                        <div class="tab-section">
+                            <h3>Gameplay</h3>
+                            <p id="product-gameplay">
+                                Découvrez un système de combat innovant, des puzzles complexes et un monde ouvert 
+                                rempli de secrets à découvrir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- System Requirements Tab -->
+                    <div class="tab-panel" id="system-tab">
+                        <div class="system-requirements">
+                            <div class="system-section">
+                                <h3><i class="fab fa-windows"></i> Windows</h3>
+                                <div class="system-grid">
+                                    <div class="system-spec">
+                                        <h4>Minimum</h4>
+                                        <ul id="system-min-windows">
+                                            <li><strong>OS:</strong> Windows 10 (64-bit)</li>
+                                            <li><strong>Processeur:</strong> Intel Core i5-3470 / AMD FX-8350</li>
+                                            <li><strong>Mémoire:</strong> 8 GB RAM</li>
+                                            <li><strong>Graphiques:</strong> NVIDIA GeForce GTX 970 / AMD Radeon RX 470</li>
+                                            <li><strong>Stockage:</strong> 50 GB d'espace disponible</li>
+                                        </ul>
+                                    </div>
+                                    <div class="system-spec">
+                                        <h4>Recommandé</h4>
+                                        <ul id="system-recommended-windows">
+                                            <li><strong>OS:</strong> Windows 11 (64-bit)</li>
+                                            <li><strong>Processeur:</strong> Intel Core i7-7700K / AMD Ryzen 5 3600</li>
+                                            <li><strong>Mémoire:</strong> 16 GB RAM</li>
+                                            <li><strong>Graphiques:</strong> NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700</li>
+                                            <li><strong>Stockage:</strong> 50 GB SSD</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="system-section">
+                                <h3><i class="fab fa-playstation"></i> PlayStation 5</h3>
+                                <div class="system-grid">
+                                    <div class="system-spec">
+                                        <h4>Exigences</h4>
+                                        <ul id="system-ps5">
+                                            <li><strong>Console:</strong> PlayStation 5</li>
+                                            <li><strong>Stockage:</strong> 60 GB minimum</li>
+                                            <li><strong>Fonctionnalités:</strong> DualSense, 3D Audio, 4K/120Hz</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="system-section">
+                                <h3><i class="fab fa-xbox"></i> Xbox Series X|S</h3>
+                                <div class="system-grid">
+                                    <div class="system-spec">
+                                        <h4>Exigences</h4>
+                                        <ul id="system-xbox">
+                                            <li><strong>Console:</strong> Xbox Series X ou S</li>
+                                            <li><strong>Stockage:</strong> 55 GB minimum</li>
+                                            <li><strong>Fonctionnalités:</strong> Quick Resume, Smart Delivery</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div class="tab-panel" id="reviews-tab">
+                        <div class="reviews-container">
+                            <div class="reviews-summary">
+                                <div class="overall-rating">
+                                    <h3>4.7/5</h3>
+                                    <div class="rating-stars large">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p>Basé sur 128 avis</p>
+                                </div>
+                                <div class="rating-breakdown">
+                                    <div class="rating-bar">
+                                        <span class="rating-label">5 étoiles</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="width: 70%"></div>
+                                        </div>
+                                        <span class="rating-percent">70%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span class="rating-label">4 étoiles</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="width: 20%"></div>
+                                        </div>
+                                        <span class="rating-percent">20%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span class="rating-label">3 étoiles</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="width: 8%"></div>
+                                        </div>
+                                        <span class="rating-percent">8%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span class="rating-label">2 étoiles</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="width: 2%"></div>
+                                        </div>
+                                        <span class="rating-percent">2%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span class="rating-label">1 étoile</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="width: 0%"></div>
+                                        </div>
+                                        <span class="rating-percent">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-list" id="reviews-list">
+                                <!-- Reviews will be loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Media Tab -->
+                    <div class="tab-panel" id="media-tab">
+                        <div class="media-gallery">
+                            <div class="media-section">
+                                <h3>Images</h3>
+                                <div class="media-grid" id="media-images">
+                                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Screenshot+1" alt="Screenshot 1">
+                                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Screenshot+2" alt="Screenshot 2">
+                                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Screenshot+3" alt="Screenshot 3">
+                                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Screenshot+4" alt="Screenshot 4">
+                                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Screenshot+5" alt="Screenshot 5">
+                                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Screenshot+6" alt="Screenshot 6">
+                                </div>
+                            </div>
+                            <div class="media-section">
+                                <h3>Vidéos</h3>
+                                <div class="video-grid" id="media-videos">
+                                    <div class="video-item">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="video-item">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="related-products">
+                <h2 class="section-title">
+                    <i class="fas fa-gamepad"></i> Jeux Similaires
+                </h2>
+                <div class="related-products-grid" id="related-products">
+                    <!-- Related products will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>Nexus Games</h3>
+                        <p>Votre boutique premium de jeux vidéo depuis 2010.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Liens Rapides</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="shop.html">Boutique</a></li>
+                            <li><a href="#">Mon Compte</a></li>
+                            <li><a href="cart.html">Panier</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Catégories</h3>
+                        <ul>
+                            <li><a href="shop.html?category=action">Action</a></li>
+                            <li><a href="shop.html?category=rpg">RPG</a></li>
+                            <li><a href="shop.html?category=fps">FPS</a></li>
+                            <li><a href="shop.html?category=adventure">Aventure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="#">Livraison et Retour</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Nexus Games. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Product Modal (for zoom) -->
+    <div class="modal" id="product-modal">
+        <button class="modal-close">&times;</button>
+        <img src="" alt="Product Image" class="modal-content">
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
